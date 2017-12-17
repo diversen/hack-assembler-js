@@ -1,0 +1,32 @@
+{
+  "name": "hack-assembler",
+  "version": "1.0.1",
+  "description": "a hack assembler",
+  "main": "index.js",
+  "dependencies": {
+    "minimist-mini": "^2.0.8",
+    "read-file": "^0.2.0"
+  },
+  "bin": {
+    "hack-asm": "cli.js"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diversen/hack-assembler-js.git"
+  },
+  "keywords": [
+    "assembler",
+    "machine-code",
+    "nand2tetris"
+  ],
+  "author": "dennis iversen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diversen/hack-assembler-js/issues"
+  },
+  "homepage": "https://github.com/diversen/hack-assembler-js#readme"
+}
