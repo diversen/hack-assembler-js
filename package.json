@@ -1,6 +1,6 @@
 {
   "name": "hack-assembler",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a hack assembler",
   "main": "index.js",
   "dependencies": {
