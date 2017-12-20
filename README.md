@@ -1,6 +1,6 @@
 # hack-assembler
 
-A assembler for the hack language. 
+A javascript assembler for the hack language. 
 
 ## Install 
 
@@ -10,4 +10,6 @@ sudo npm install -g hack-assembler
 
 hack-asm ./program.asm > program.hack
 
+## License
 
+MIT © [Dennis Iversen](https://github.com/diversen)
