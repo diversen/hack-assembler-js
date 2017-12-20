@@ -7,12 +7,14 @@ function trimComments(str) {
 
 function assembler(str) {
 
+    // Trim comments
     var str = trimComments(str)
-    var regExp = /\(([^)]+)\)/
+
+    // Split code array
     var codeAry = str.split('\n')
     var code = {}
 
-    // Mv to object  with trimmed values
+    // Move to object  with trimmed values
     codeAry.forEach((element, i) => {
         code[i] = element.trim()
     });
@@ -21,6 +23,9 @@ function assembler(str) {
     var labels = {}
     var i = 0;
     
+    // Get LOOPS, e.g. (LOOP) and line number
+    var regExp = /\(([^)]+)\)/
+
     for (key in code) {
         var matches = regExp.exec(code[key]);
         if (!matches) {
@@ -30,6 +35,7 @@ function assembler(str) {
         }
     }
 
+    // Move labels and code to this
     this.labels = labels
     this.code = final
    
@@ -44,8 +50,10 @@ function assembler(str) {
         }
     }
 
+    // Memory start after last register
     this.currentM = 16
 
+    // Add other symbols to symbol table
     this.addSymbolsTotable = function () {
         for (key in this.code) {
 
@@ -61,7 +69,7 @@ function assembler(str) {
         }
     }
 
-    // Substitute symbols
+    // Substitute all symbols
     this.subSymbols = function () {
         for (key in this.code) {
             let line = this.code[key]
@@ -72,6 +80,7 @@ function assembler(str) {
         }
     }
 
+    // Get opcode
     this.getOpcode = function (line) {
         if (line.startsWith('@')) {
             return 0
@@ -79,6 +88,7 @@ function assembler(str) {
         return 1
     }
 
+    // Parse C opcode
     // ixxaccccccdddjjj
     this.parseOpcodeC = function (line) {
         
@@ -104,19 +114,20 @@ function assembler(str) {
 
     }
 
+    // Parse A opcode
     this.parseOpcodeA = function (line) {
         line = line.replace('@', '')
 
         var i = parseInt(line)
         var bin = i.toString(2)
 
-        
         while(bin.length < 16) {
             bin = "0" + bin
         }
         return bin
     }
 
+    // Assemble
     this.assemble = function () {
 
         this.subLabel()
