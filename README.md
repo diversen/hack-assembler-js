@@ -4,11 +4,11 @@ A javascript assembler for the hack language.
 
 ## Install 
 
-sudo npm install -g hack-assembler
+    sudo npm install -g hack-assembler
 
 ## Usage
 
-hack-asm ./program.asm > program.hack
+    hack-asm ./program.asm > program.hack
 
 ## License
 
