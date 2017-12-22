@@ -128,7 +128,7 @@ function assembler(str) {
     }
 
     // Assemble
-    this.assemble = function () {
+    this.getAssembleCode = function () {
 
         this.subLabel()
         this.addSymbolsTotable()
@@ -143,6 +143,12 @@ function assembler(str) {
                 instructions += this.parseOpcodeA(this.code[key]) + '\n'
             }    
         }
+        return instructions
+        
+    }
+
+    this.assemble = function () {
+        var instructions = this.getAssembleCode()
         console.log(instructions.trim())
     }
 }
