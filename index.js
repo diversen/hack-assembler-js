@@ -143,13 +143,13 @@ function assembler(str) {
                 instructions += this.parseOpcodeA(this.code[key]) + '\n'
             }    
         }
-        return instructions
+        return instructions.trim()
         
     }
 
     this.assemble = function () {
         var instructions = this.getAssembleCode()
-        console.log(instructions.trim())
+        console.log(instructions)
     }
 }
 
