@@ -16,7 +16,10 @@ function assembler(str) {
 
     // Move to object  with trimmed values
     codeAry.forEach((element, i) => {
-        code[i] = element.trim()
+        var line = element.trim()
+        if (line) {
+            code[i] = element.trim()
+        }
     });
 
     var final = {}
