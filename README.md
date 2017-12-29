@@ -23,8 +23,8 @@ var assembler = require('hack-assembler')
 // Comments will be removed
 var codeObj = new assembler(code)
 
-// Get machine code as string
-var machineCode = codeObj.getAssembleCode()
+// Get assembled code (machine code) as string
+var machineCode = codeObj.getAssembledCode()
 ~~~
 
 
