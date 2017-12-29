@@ -17,14 +17,14 @@ A javascript assembler for the hack language.
 ## Code example as lib
 
 ~~~javascript
-    var assembler = require('hack-assembler')
+var assembler = require('hack-assembler')
     
-    // code => string of assemble code
-    // Comments will be removed
-    var codeObj = new assembler(code)
+// code => string of assemble code
+// Comments will be removed
+var codeObj = new assembler(code)
 
-    // Get machine code as string
-    var machineCode = codeObj.getAssembleCode()
+// Get machine code as string
+var machineCode = codeObj.getAssembleCode()
 ~~~
 
 
