@@ -9,7 +9,7 @@
    @0
    D=M
    @INFINITE_LOOP
-   D;JLE 
+   D;JGE 
    @counter
    M=D
    @SCREEN
