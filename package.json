@@ -4,8 +4,9 @@
   "description": "a hack assembler",
   "main": "index.js",
   "dependencies": {
-    "minimist-mini": "^2.0.8",
-    "read-file": "^0.2.0"
+    "minimist-mini": "^2.0.9",
+    "read-file": "^0.2.0",
+    "remove-comments-regex": "^1.0.1"
   },
   "bin": {
     "hack-asm": "cli.js"

@@ -1,14 +1,10 @@
 var {symbolTable, dest, jump, comp} = require('./constants')
-
-function trimComments(str) {
-    var uncommented = str.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '$1')
-    return uncommented.replace(/^\s+|\s+$/g, '')
-}
+var removeComments = require('remove-comments-regex')
 
 function assembler(str) {
 
     // Trim comments
-    var str = trimComments(str)
+    var str = removeComments(str)
 
     // Split code array
     var codeAry = str.split('\n')

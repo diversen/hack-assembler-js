@@ -16,7 +16,7 @@ A javascript assembler for the hack language.
 
 ## Code example as lib
 
-~~~javascript
+```.javascript
 var assembler = require('hack-assembler')
     
 // code => string of assemble code
@@ -25,8 +25,7 @@ var codeObj = new assembler(code)
 
 // Get assembled code (machine code) as string
 var machineCode = codeObj.getAssembledCode()
-~~~
-
+```
 
 ## License
 
