@@ -27,6 +27,10 @@ var codeObj = new assembler(code)
 var machineCode = codeObj.getAssembledCode()
 ```
 
+## Related
+
+[hack-assembler-js](https://github.com/diversen/hack-assembler-js)
+
 ## License
 
 MIT © [Dennis Iversen](https://github.com/diversen)
