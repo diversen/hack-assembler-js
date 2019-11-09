@@ -29,7 +29,7 @@ var machineCode = codeObj.getAssembledCode()
 
 ## Related
 
-[hack-assembler-js](https://github.com/diversen/hack-assembler-js)
+[hack-emulator-js](https://github.com/diversen/hack-emulator-js)
 
 ## License
 
